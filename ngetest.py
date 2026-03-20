@@ -7,7 +7,4 @@ data = pd.read_csv("https://raw.githubusercontent.com/Eraneo/churn_pian/refs/hea
 print (data.info())
 
 print (data["TotalCharges"].head())
-
-
-
-
+# kedepannya kudu labelencoder untuk TotalCharges karena masih string
