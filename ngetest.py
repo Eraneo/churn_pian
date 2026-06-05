@@ -8,3 +8,18 @@ print (data.info())
 
 print (data["TotalCharges"].head())
 # kedepannya kudu labelencoder untuk TotalCharges karena masih string
+print (data)
+binary_cols = [
+    'gender',
+    'Partner',
+    'Dependents',
+    'PhoneService',
+    'PaperlessBilling',
+    'Churn'
+]
+
+for col in binary_cols:
+    data[col] = data[col].map({
+        'Yes':1, 'No':0,
+        'Male':1, 'Female':0
+    })
